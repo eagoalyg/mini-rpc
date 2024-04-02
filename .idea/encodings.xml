@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mini-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-rpc-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-rpc-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-rpc-serv/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-rpc-serv/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-rpc-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mini-rpc-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
