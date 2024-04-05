@@ -8,8 +8,11 @@ import com.samuel.model.RpcResponse;
 import com.samuel.model.ServiceMetaInfo;
 import com.samuel.registry.Registry;
 import com.samuel.registry.RegistryFactory;
+import com.samuel.retry.Retry;
+import com.samuel.retry.RetryFactory;
 import com.samuel.serializer.Serializer;
 import com.samuel.serializer.SerializerFactory;
+import com.samuel.server.HttpClient;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -37,15 +40,9 @@ public class ServiceProxy implements InvocationHandler {
         ServiceMetaInfo serviceMetaInfo = serviceMetaInfos.get(0);
         Serializer serializer = SerializerFactory.newInstance("jdk");
 
-        byte[] bytes = serializer.serialize(requestBody);
-
-        try (HttpResponse response = HttpRequest.post(serviceMetaInfo.getFullyAddress()).body(bytes).execute()) {
-            byte[] bodyBytes = response.bodyBytes();
-            RpcResponse deserialize = serializer.deserialize(bodyBytes, RpcResponse.class);
-            return deserialize.getData();
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-            throw new RuntimeException("异常");
-        }
+        Retry retry = RetryFactory.getInstance("");
+        RpcResponse rpcResponse = null;
+        rpcResponse = retry.doRetry(() -> HttpClient.doRequest(serializer, requestBody, serviceMetaInfo));
+        return rpcResponse.getData();
     }
 }
